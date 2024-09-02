@@ -1,0 +1,94 @@
+/* components/Sidebar.module.css */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #1B1C1D;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+.logoImage {
+  width: 40px; /* Adjust width as needed */
+  height: 40px; /* Adjust height as needed */
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.logo h3 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.logo p {
+  margin: 0;
+  font-size: 16px;
+  color: #aaa;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.menu li a:hover {
+  background-color: #444;
+}
+
+.icon {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.bottomSection {
+  border-top: 1px solid #444;
+  padding-top: 20px;
+}
+
+.logout, .toggleDarkMode {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.logout:hover, .toggleDarkMode:hover {
+  background-color: #444;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.toggleDarkMode {
+  justify-content: space-between;
+}
+
+.sidebar span{ 
+  font-size: 22px;
+}

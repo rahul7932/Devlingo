@@ -1,0 +1,10 @@
+/* components/Layout.module.css */
+.container {
+  display: flex;
+}
+
+.mainContent {
+  margin-left: 15%;
+  padding: 20px;
+  width: 100%;
+}
