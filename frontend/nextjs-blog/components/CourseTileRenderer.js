@@ -13,6 +13,7 @@ const CourseTileRenderer = ({ title, courses }) => {
             title={course.title}
             progress={course.progress}
             description={course.description}
+            courseId={course.courseId}
           />
         ))}
       </div>
