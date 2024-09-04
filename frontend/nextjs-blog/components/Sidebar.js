@@ -28,13 +28,13 @@ const Sidebar = () => {
           </Link>
         </li>
         <li>
-          <Link href="/revenue">
+          <Link href="/progress">
             <FaChartBar className={styles.icon} />
-            <span>Lessons</span>
+            <span>Progress</span>
           </Link>
         </li>
         <li>
-          <Link href="/analytics">
+          <Link href="/profile">
             <FaUser className={styles.icon} />
             <span>Profile</span>
           </Link>
