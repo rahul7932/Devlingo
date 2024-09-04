@@ -39,5 +39,24 @@
 }
 
 .box:hover {
-  background-color: #b1b1b1; /* Change to your desired hover color */
+  background-color: #cbcbcb; /* Change to your desired hover color */
+}
+
+.iconStyle {
+  margin-right: 5px;
+  vertical-align: middle;
+  position: relative;
+  top: -2.5px;
+}
+
+.checkStyle {
+  color: rgb(119, 221, 119);
+}
+
+.warningStyle {
+  color: rgb(253, 253, 121);
+}
+
+.lockStyle{
+  color: rgb(255, 77, 77);
 }

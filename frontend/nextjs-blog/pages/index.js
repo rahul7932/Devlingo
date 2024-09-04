@@ -2,7 +2,7 @@ import CourseTileRenderer from '../components/CourseTileRenderer'; // Adjust the
 
 const HomePage = () => {
   const courses = [
-    { title: 'Course 1', progress: 50, description: 'Description of course 1', courseId:"12345"},
+    { title: 'Introduction to Go Programming', progress: 50, description: '"Introduction to Go Programming" is a concise course that teaches you the fundamentals of Go, from basic syntax to advanced concurrency, equipping you with the skills to build efficient applications.', courseId:"12345"},
     { title: 'Course 2', progress: 75, description: 'Description of course 2', courseId:"12345" },
     { title: 'Course 3', progress: 75, description: 'Description of course 2', courseId:"12345" },
     { title: 'Course 5', progress: 75, description: 'Description of course 2', courseId:"12345" },
