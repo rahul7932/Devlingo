@@ -1,0 +1,43 @@
+.box {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.box h2 {
+  margin-bottom: 15px;
+}
+
+.progressBarContainer {
+  display: flex;
+  align-items: left;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.progressBar {
+  height: 20px;
+  background-color: #6a67ce;
+  border-radius: 5px 0 0 5px;
+  transition: width 0.3s ease;
+}
+
+.progressText {
+  margin-left: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+.box p {
+  color: #666;
+  transition: background-color 0.3s ease;
+}
+
+.box:hover {
+  background-color: #b1b1b1; /* Change to your desired hover color */
+}
