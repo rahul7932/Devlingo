@@ -1,24 +1,15 @@
 import React from 'react';
+import styles from '../styles/MultipleChoiceQuestion.module.css'; // Make sure path is correct
 
 const MultipleChoiceQuestion = ({ question, answers, onAnswerClick }) => {
     return (
-        <div style={{ margin: '20px' }}>
-            <h1>{question}</h1>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+        <div className={styles.questionContainer}>
+            <h1 className={styles.question}>{question}</h1>
+            <div className={styles.answersContainer}>
                 {answers.map((answer, index) => (
                     <button
                         key={index}
-                        style={{
-                            padding: '10px 20px',
-                            cursor: 'pointer',
-                            fontWeight: 'bold',
-                            borderRadius: '5px',
-                            backgroundColor: '#f0f0f0',
-                            border: '2px solid #ccc',
-                            ':hover': {
-                                backgroundColor: '#e2e2e2'
-                            }
-                        }}
+                        className={styles.button}
                         onClick={() => onAnswerClick(answer)}
                     >
                         {answer}
