@@ -16,7 +16,7 @@ def get_all_courses():
     return response
 
 def get_sections():
-    
+    pass
 
 
 print(get_course())
