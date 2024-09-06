@@ -1,32 +1,77 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/router';
-import styles from '../../../styles/SectionPage.module.css';
+import styles from '../../../styles/QuestionPage.module.css';
 import MultipleChoiceQuestion from '../../../components/MultipleChoiceQuestion';
 
-const SectionPage = ({ sections }) => {
+const QuestionPage = ({ sections }) => {
   const router = useRouter();
   const { courseId, sectionId } = router.query;
 
-  // hit an api to get all the data for the courseId
-    
+  // Sample list of questions
+  const questions = [
+    {
+      text: 'What is the capital of France?',
+      options: [
+        { id: 1, text: 'Berlin', isCorrect: false },
+        { id: 2, text: 'Madrid', isCorrect: false },
+        { id: 3, text: 'Paris', isCorrect: true },
+        { id: 4, text: 'Rome', isCorrect: false },
+      ],
+    },
+    {
+      text: 'Which planet is known as the Red Planet?',
+      options: [
+        { id: 1, text: 'Earth', isCorrect: false },
+        { id: 2, text: 'Mars', isCorrect: true },
+        { id: 3, text: 'Jupiter', isCorrect: false },
+        { id: 4, text: 'Saturn', isCorrect: false },
+      ],
+    },
+    {
+      text: 'What is the largest ocean on Earth?',
+      options: [
+        { id: 1, text: 'Indian Ocean', isCorrect: false },
+        { id: 2, text: 'Atlantic Ocean', isCorrect: false },
+        { id: 3, text: 'Arctic Ocean', isCorrect: false },
+        { id: 4, text: 'Pacific Ocean', isCorrect: true },
+      ],
+    },
+  ];
+
+  // State to track the current question index
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+
+  // Handle moving to the next question
+  const handleNextQuestion = () => {
+    if (currentQuestionIndex < questions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+    }
+  };
+
+  // Show a loading state until courseId and sectionId are available
   if (!courseId && !sectionId) {
     return <div>Loading...</div>;
   }
 
-  const answers = [
-   'anwer 1 anwer 1 anwer 1 anwer 1 anwer 1','test','anwer 1 anwer 1 anwer 1 anwer 1 anwer 1 anwer 1 anwer 1 anwer 1 anwer 1 anwer 1',,,'4'
-  ]
-
-  function useless() {
-    return
-  }
-
   return (
     <div className={styles.container}>
-      <MultipleChoiceQuestion question="What each of these uses correct syntax?" answers={answers} onAnswerClick={useless} ></MultipleChoiceQuestion>
+      {/* Display the current question based on the index */}
+      <MultipleChoiceQuestion
+        questionText={questions[currentQuestionIndex].text}
+        options={questions[currentQuestionIndex].options}
+      />
+      <div className={styles.buttonContainer}>
+        {/* Next button, disabled on the last question */}
+        <button
+          className={styles.nextButton}
+          onClick={handleNextQuestion}
+          disabled={currentQuestionIndex >= questions.length - 1}
+        >
+          Next
+        </button>
+      </div>
     </div>
   );
 };
 
-export default SectionPage;
-
+export default QuestionPage;
